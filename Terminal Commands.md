@@ -20,7 +20,7 @@ Some commands can be found in the `bin` directory.
 `rm` - used to remove a file.<br/>
 `rm -r` - used to remove a directory.<br/>
 `mkdir` - makes a directory<br/>
-`rmdir` - removes an empty directory<br/>
+`rmdir` - removes an **empty** directory<br/>
 
 `grep <text to search> <files to search in>`
 
