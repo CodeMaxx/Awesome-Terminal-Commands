@@ -7,9 +7,9 @@ Some commands can be found in the `bin` directory.
  `cd` -> takes to user directory[denoted by ~]<br/>
  `cd -` -> takes to the previous directory we were in)<br/>
 
-- **Trivia:** `user` directoty is present in the `home` directory which is present in the `root` directory. Then there is no upper directory.
+- **Trivia:** `user` directory is present in the `home` directory which is present in the `root` directory. Then there is no upper directory.
 
-`pwd` - print which directory
+`pwd` - print working directory
 
 `^` symbol is used for representing 'ctrl'  ... e.g. `^C` = ctrl key + c
 
@@ -45,12 +45,15 @@ Some commands can be found in the `bin` directory.
 
 `echo "hello"` - prints hello on the terminal
 
-`>` - used to store the output of a task in some file(overwrites if file with same name there) rather than displaying it on the terminal.<br/>
+`>` - used to store the output of a task in some file(overwrites if file with same name is present) rather than displaying it on the terminal.<br/>
 `>>` - same task as `>` but does not overwrites just appends to the file with the same name.<br/>
 
 `cat` - used to open a file in terminal in read-only format
 
 `|` - piping is used to give the output of a command as input to another command ..for e.g `history | grep "find"` will search for "find" in the output of `history`
+
+`<command> | tee <filename>` - used to show output of `command` on terminal as well as writing the output to a file `filename`.<br/>
+
 
 "Flags"
 
