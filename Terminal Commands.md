@@ -54,8 +54,12 @@ Some commands can be found in the `bin` directory.
 
 `<command> | tee <filename>` - used to show output of `command` on terminal as well as writing the output to a file `filename`.<br/>
 
+##### Some common network debugging commands <br/>
+`ifconfig` - when used without any flags, used to display the status of all active network interfaces.<br/>
 
-"Flags"
+`iwconfig` - similar to `ifconfig`, but used for wireless network interfaces. <br/>
+
+##### Flags
 
 `-f` forcefully do a task i.e. without asking for confirmation<br/>
 `-r` recursively do a task(looks in subdirectories too)
