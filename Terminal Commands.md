@@ -15,8 +15,6 @@ Some commands can be found in the `bin` directory.
 
 `touch <filename>`- creates a new file with any extension we want.
 
-- **Trivia:** Some text editor like **nano** ,**vim** and **emacs** can be used to edit the code on the terminal itself.(writing `nano hello.cpp` opens file `hello.cpp` in terminal)
-
 `rm` - used to remove a file.<br/>
 `rm -r` - used to remove a directory.<br/>
 `mkdir` - makes a directory<br/>
@@ -66,6 +64,6 @@ Some commands can be found in the `bin` directory.
 
 ##### Opening files with common Text Editors
 
-`(vim|vi|nano) <filename>` : opens a file in the respective text editor inside the terminal.<br/> 
+`(vim|vi|nano|emacs) <filename>` : opens a file in the respective text editor inside the terminal.<br/> 
 `subl <filename>` : opens a file with filename in sublime text.<br/>
 `gedit <filename>` : opens a file with filename in gedit .
