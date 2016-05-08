@@ -64,8 +64,8 @@ Some commands can be found in the `bin` directory.
 `-f` forcefully do a task i.e. without asking for confirmation<br/>
 `-r` recursively do a task(looks in subdirectories too)
 
-##### Open files from common text editors
+##### Opening files with common Text Editors
 
-`(vim|vi|nano) <filename>` : opens file in the respective text editor inside the terminal.<br/> 
+`(vim|vi|nano) <filename>` : opens a file in the respective text editor inside the terminal.<br/> 
 `subl <filename>` : opens a file with filename in sublime text.<br/>
 `gedit <filename>` : opens a file with filename in gedit .
