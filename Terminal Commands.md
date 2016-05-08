@@ -63,3 +63,7 @@ Some commands can be found in the `bin` directory.
 
 `-f` forcefully do a task i.e. without asking for confirmation<br/>
 `-r` recursively do a task(looks in subdirectories too)
+
+
+ subl <filename> : opens a file with filename in sublime text.
+ gedit <filename> : opens a file with filename in gedit 
