@@ -1,6 +1,9 @@
 Some commands can be found in the `bin` directory.
 
-`ls` - list files
+`ls` - list files<br>
+`ls -a` - display hidden files and folders<br>
+`ls -R` - provide a tree listing of directory structure.<br>
+`ls -l` - displays extra details like size, user, date, permissions<br>
 
 `cd <path>` -> change directory<br/>
 (`cd ..` -> takes to parent directory<br/>
@@ -20,7 +23,17 @@ Some commands can be found in the `bin` directory.
 `mkdir` - makes a directory<br/>
 `rmdir` - removes an **empty** directory<br/>
 
+`cp /loc1/file /loc2/file` - used to copy file from /loc1 to /loc2.<br>
+`mv /loc1/file /loc2/file` - used to move file from /loc1 to /loc2.
+
+- **Trivia:** `mv oldfilename newfilename` is the best method to rename a file.
+
 `grep <text to search> <files to search in>`
+
+`cut` - cuts out selected portions of each line from file and writes them to the standard output.<br>
+`cut -c 2-5 file` - cut characters 2 to 5 from each line of file<br>
+`cut -d"x" -f 1 file` - returns each part of every line before first occurance of 'x' (-d is delimiter and -f is field)
+
 
 `clear` or `^l` - scrolls down to an empty screen
 
@@ -30,9 +43,12 @@ Some commands can be found in the `bin` directory.
 `find -d <query>` - looks for a directory with name `query`<br/>
 `find -f <query>` - looks for a file with name `query`<br/>
 
-`history` - shows all typed commands history
+`history` - shows all typed commands history<br>
+`history n` -shows last n commands
 
-`!<text>` - repeats a previous command in history which started with 'text'
+`!<text>` - repeats a previous command in history which started with 'text'<br>
+`!!` - repeats the previous command<br>
+`sudo !!` - repeats the previous command as sudo
 
 `man <command>` - shows manual for that command. Manual contains all the flags realated to that command.
 
@@ -46,16 +62,22 @@ Some commands can be found in the `bin` directory.
 `>` - used to store the output of a task in some file(overwrites if file with same name is present) rather than displaying it on the terminal.<br/>
 `>>` - same task as `>` but does not overwrites just appends to the file with the same name.<br/>
 
-`cat` - used to open a file in terminal in read-only format
-
 `|` - piping is used to give the output of a command as input to another command ..for e.g `history | grep "find"` will search for "find" in the output of `history`
 
 `<command> | tee <filename>` - used to show output of `command` on terminal as well as writing the output to a file `filename`.<br/>
 
-##### Some common network debugging commands <br/>
-`ifconfig` - when used without any flags, used to display the status of all active network interfaces.<br/>
+`cat` - used to open a file in terminal in read-only format
 
-`iwconfig` - similar to `ifconfig`, but used for wireless network interfaces. <br/>
+- **Trivia:** Unless you have infinite scrolling turned on (available in Profile Preferences -> Scrolling tab of the terminal), there is a limit to how many lines you can see on the screen.
+
+`(output of some command) | less` - allows the user to advance through the content by pressing SPACE, move backwards by pressing 'b' and quit using 'q'. Pressing ESC followed by SPACE allows you to scroll down one screen at a time.
+
+Example: `cat file | less`
+
+`(output of some command) | more` - is similar to using `less`, but allows viewing one screen at a time.
+
+- **Trivia:** All commands typed in the terminal are saved in `history` or the `.bash_history` file in the home directory. 
+`history | less` or `cat ~/.bash_history` will let you scroll through previously typed commands.
 
 ##### Flags
 
@@ -67,3 +89,39 @@ Some commands can be found in the `bin` directory.
 `(vim|vi|nano|emacs) <filename>` : opens a file in the respective text editor inside the terminal.<br/> 
 `subl <filename>` : opens a file with filename in sublime text.<br/>
 `gedit <filename>` : opens a file with filename in gedit .
+
+##### Aliases 
+
+An alias is a word assigned to a statement, and acts as a keyboard shortcut.
+
+`alias py='python'` - would pass "python" whenever py is entered.
+
+This alias lasts as long as the terminal is running. To create a permanent alias, append this line to `~/.bash_profile` or `~/.bash_aliases`
+
+##### Some common network debugging commands 
+
+`ifconfig` - when used without any flags, used to display the status of all active network interfaces.<br/>
+
+`iwconfig` - similar to `ifconfig`, but used for wireless network interfaces. <br/>
+
+##### Extracting .tar files
+
+`tar -xvzf file.tar.gz` - used to extract the .tar.gz file<br>
+-f: this must be the last flag of the command, and the tar file must be immediately after. It tells tar the name and path of the compressed file.<br>
+-z: tells tar to decompress the archive using gzip<br>
+-x: tar can collect files or extract them. x does the latter.<br>
+-v: makes tar talk a lot. Verbose output shows you all the files being extracted.
+
+##### Process Management
+
+`ps` returns the snapshot of current processes.<br>
+`ps -e` returns every process running on the system<br>
+`ps -u <useraccount>` returns list of processes running on user account.<br>
+`ps -u <useraccount> | grep <Application>` - fetches all processes of "Application"
+
+The left most number returned by the `ps` command is called the Process ID (PID).
+A particular process can be terminated using `kill`
+
+`kill <PID>` - kills the process having PID as that entered.<br>
+`kill -9 <PID>` - performs a violent kill<br>
+`killall <processname>` - kills all instances of processname
