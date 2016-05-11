@@ -76,7 +76,7 @@ Example: `cat file | less`
 
 `(output of some command) | more` - is similar to using `less`, but allows viewing one screen at a time.
 
-- **Trivia:** All commands typed in the terminal are saved in `history` or the `.bash_history` file in the home directory. 
+- **Trivia:** All commands typed in the terminal are saved in `history` or the `.bash_history` file in the home directory.
 `history | less` or `cat ~/.bash_history` will let you scroll through previously typed commands.
 
 ##### Flags
@@ -86,11 +86,17 @@ Example: `cat file | less`
 
 ##### Opening files with common Text Editors
 
-`(vim|vi|nano|emacs) <filename>` : opens a file in the respective text editor inside the terminal.<br/> 
+`(vim|vi|nano|emacs) <filename>` : opens a file in the respective text editor inside the terminal.<br/>
 `subl <filename>` : opens a file with filename in sublime text.<br/>
 `gedit <filename>` : opens a file with filename in gedit .
 
-##### Aliases 
+##### Running Scripts
+
+`sh myscript` - To run a non-executable `sh` script.<br/>
+`bash myscript` - To run a non-executable `bash` script<br/>
+`location/of/executable` - Just type the file location to run an executable file.
+
+##### Aliases
 
 An alias is a word assigned to a statement, and acts as a keyboard shortcut.
 
@@ -98,7 +104,17 @@ An alias is a word assigned to a statement, and acts as a keyboard shortcut.
 
 This alias lasts as long as the terminal is running. To create a permanent alias, append this line to `~/.bash_profile` or `~/.bash_aliases`
 
-##### Some common network debugging commands 
+##### Changing Permissions
+
+`chmod a+x file` - Grants execution permission to all users of a file.<br/>
+`chmod a+w file` - Grants write permission to all users of a file.<br/>
+`chmod a+r file` - Grants read permission to all users of a file.
+
+This are just examples. `chmod` has a lot of different configurations for different kinds of permissions. For all details see its `man` page.
+
+`chown -R (username) path/of/file/or/directory` - Gives the ownership of the file or all files in the directory and its subdirectories to the mentioned user.
+
+##### Some common network debugging commands
 
 `ifconfig` - when used without any flags, used to display the status of all active network interfaces.<br/>
 
