@@ -120,6 +120,12 @@ This are just examples. `chmod` has a lot of different configurations for differ
 
 `iwconfig` - similar to `ifconfig`, but used for wireless network interfaces. <br/>
 
+`ping domain_name_or_ip_address` - Used to ping a domain name or IP address continuously. It can be stopped by `^C`. Generally used to check if the server is up and responding.
+
+`dig example.com` - Queries DNS servers for information. Using the `+short` flag returns the IP address linked to the domain name.
+
+`whois domain_name.com` - Generates a long list of output regarding the server registration.
+
 ##### Extracting .tar files
 
 `tar -xvzf file.tar.gz` - used to extract the .tar.gz file<br>
