@@ -101,9 +101,11 @@ Example: `cat file | less`
 
 An alias is a word assigned to a statement, and acts as a keyboard shortcut.
 
-`alias py='python'` - would pass "python" whenever py is entered.
+`alias py='python'` - would pass `python` whenever `py` is entered.
 
-This alias lasts as long as the terminal is running. To create a permanent alias, append this line to `~/.bash_profile` or `~/.bash_aliases`
+This alias lasts as long as the terminal is running. To create a permanent alias, append this line to `~/.bash_profile` or `~/.bash_aliases`.
+
+`unalias <alias_name>` - Removes the alias. E.g. `unalias py` - After this `py` would not work as `python`.
 
 ##### Changing Permissions
 
