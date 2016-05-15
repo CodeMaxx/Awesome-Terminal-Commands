@@ -70,11 +70,11 @@ Some commands can be found in the `bin` directory.
 
 - **Trivia:** Unless you have infinite scrolling turned on (available in Profile Preferences -> Scrolling tab of the terminal), there is a limit to how many lines you can see on the screen.
 
-`(output of some command) | less` - allows the user to advance through the content by pressing SPACE, move backwards by pressing 'b' and quit using 'q'. Pressing ESC followed by SPACE allows you to scroll down one screen at a time.
+`<output of some command> | less` - allows the user to advance through the content by pressing SPACE, move backwards by pressing 'b' and quit using 'q'. Pressing ESC followed by SPACE allows you to scroll down one screen at a time.
 
 Example: `cat file | less`
 
-`(output of some command) | more` - is similar to using `less`, but allows viewing one screen at a time.
+`<output of some command> | more` - is similar to using `less`, but allows viewing one screen at a time.
 
 - **Trivia:** All commands typed in the terminal are saved in `history` or the `.bash_history` file in the home directory.
 `history | less` or `cat ~/.bash_history` will let you scroll through previously typed commands.
@@ -86,9 +86,10 @@ Example: `cat file | less`
 
 ##### Opening files with common Text Editors
 
-`(vim|vi|nano|emacs) <filename>` : opens a file in the respective text editor inside the terminal.<br/>
-`subl <filename>` : opens a file with filename in sublime text.<br/>
-`gedit <filename>` : opens a file with filename in gedit .
+`<vim|vi|nano|emacs> <filename>` : opens a file in the respective text editor inside the terminal.<br/>
+`gedit <filename>` : opens a file with filename in Gedit .
+`subl <filename>` : opens a file with filename in Sublime Text.<br/>
+`subl <foldername>`: Opens the entire folder in Sublime Text. Very helpful when you are working on projects with multiple file.
 
 ##### Running Scripts
 
@@ -112,7 +113,7 @@ This alias lasts as long as the terminal is running. To create a permanent alias
 
 This are just examples. `chmod` has a lot of different configurations for different kinds of permissions. For all details see its `man` page.
 
-`chown -R (username) path/of/file/or/directory` - Gives the ownership of the file or all files in the directory and its subdirectories to the mentioned user.
+`chown -R <username> path/of/file/or/directory` - Gives the ownership of the file or all files in the directory and its subdirectories to the mentioned user.
 
 ##### Some common network debugging commands
 
