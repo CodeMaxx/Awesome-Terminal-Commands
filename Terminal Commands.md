@@ -167,6 +167,8 @@ This are just examples. `chmod` has a lot of different configurations for differ
 
 ##### Process Management
 
+`top` - displays processor activity in real time.
+
 `ps` returns the snapshot of current processes.<br>
 `ps -e` returns every process running on the system<br>
 `ps -u <useraccount>` returns list of processes running on user account.<br>
