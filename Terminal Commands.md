@@ -46,11 +46,18 @@ Some commands can be found in the `bin` directory.
 `history` - shows all typed commands history<br>
 `history n` -shows last n commands
 
+`sudo <command>` - Run the command as superuser.
+
 `!<text>` - repeats a previous command in history which started with 'text'<br>
 `!!` - repeats the previous command<br>
-`sudo !!` - repeats the previous command as sudo
+`sudo !!` - repeats the previous command as superuser.
 
-`man <command>` - shows manual for that command. Manual contains all the flags realated to that command.
+`whoami` -  gives the username of the current user.<br/>
+`sudo su <username>` - Used to switch to a different user. This prompts for the password of the user you switch to.
+
+- **Trivia:**`sudo` stands for `SUperuser DO` and `su` stands for `Switch User`.
+
+`man <command>` - shows manual entry for the command. Manual contains all the flags realated to that command and their use.
 
 `.` - refers to current directory<br/>
 `..` - refers to parent directory<br/>
@@ -79,10 +86,11 @@ Example: `cat file | less`
 - **Trivia:** All commands typed in the terminal are saved in `history` or the `.bash_history` file in the home directory.
 `history | less` or `cat ~/.bash_history` will let you scroll through previously typed commands.
 
-##### Flags
+##### Common Flags
 
 `-f` forcefully do a task i.e. without asking for confirmation<br/>
-`-r` recursively do a task(looks in subdirectories too)
+`-r` recursively do a task(looks in subdirectories too)<br/>
+`-o <filename>` - stores the output with a personalised filename rather than the default filename. For e.g. `g++ -o myfile program.cpp` will generate an executable with the name `myfile` rather than the default `a.out`.
 
 ##### Opening files with common Text Editors
 
