@@ -95,7 +95,7 @@ Example: `cat file | less`
 
 `sh myscript` - To run a non-executable `sh` script.<br/>
 `bash myscript` - To run a non-executable `bash` script<br/>
-`location/of/executable` - Just type the file location to run an executable file.
+`./<location/of/executable>` - Just type the file location to run an executable file.
 
 ##### Aliases
 
@@ -106,6 +106,34 @@ An alias is a word assigned to a statement, and acts as a keyboard shortcut.
 This alias lasts as long as the terminal is running. To create a permanent alias, append this line to `~/.bash_profile` or `~/.bash_aliases`.
 
 `unalias <alias_name>` - Removes the alias. E.g. `unalias py` - After this `py` would not work as `python`.
+
+##### Downloading
+
+`Wget` and `cURL` are two great utilities for downloading stuff. They are a replacement to the Download Managers you must have used on Windows.
+
+- **Trivia:** `cURL` is powered by `libcurl` - a cross-platform library with a stable API that can be used by each and everyone. `Wget` on the other hand is command line only. There's no library.
+
+`wget <url_to_download>` - Downloads the file at the specified url.<br/>
+`wget -c <url_to_download>` - Resumes an incomplete download. Very helpful when a large file download stops due to some error.<br/>
+`wget --tries=100 <url_to_download>` - Set the retry download attempts. This is very useful when the download file is large and the internet connection has problems.
+
+- **Trivia:** `wget` does 20 retries by default.
+
+`wget -i <download_list_file.txt>` - For Multiple downloads. Downloads all the files/URLs mentioned in file.<br/>
+`wget --recursive --page-requisites --html-extension --convert-links --no-parent <URL>` - Use this command to download the entire website so that you can view it offline.<br/>
+- --recursive: download the entire Web site.
+- --page-requisites: get all the elements that compose the page (images, CSS and so on).
+- --html-extension: save files with the .html extension.
+- --convert-links: convert links so that they work locally, off-line.
+- --no-parent: prevents wget from downloading anything from the folders beneath the folder you want to acquire.
+
+- **Trivia:** `cURL` supports more protocols and authentication methdods than `Wget` and is almost always pre-installed on the OS. `Wget` on the other hand is famous because of its ability to download an entire website for offline view.
+
+`curl -O <url_to_download>` - Downloads the file at the specified url.<br/>
+`curl -O <URL1> -O <URL2>` - Downloads files at both urls.<br/>
+`curl -C - -O <url_to_download>` - Resumes an incomplete download.
+
+- **Trivia:** `cURL` can also be used to upload files to `ftp` server. Use `curl -u <ftpuser>:<ftppass> -T <myfile> <ftp://ftp.testserver.com>`
 
 ##### Changing Permissions
 
