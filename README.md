@@ -1,4 +1,4 @@
-Some commands can be found in the `bin` directory.
+# Unix Terminal Commands for Beginners
 
 `ls` - list files<br>
 `ls -a` - display hidden files and folders<br>

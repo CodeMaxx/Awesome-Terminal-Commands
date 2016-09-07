@@ -1,4 +1,4 @@
-# Unix Terminal Commands for Beginners
+# Contributing
 
 This repository contains general purpose commands which are often used by unix users working on a Terminal.
 
