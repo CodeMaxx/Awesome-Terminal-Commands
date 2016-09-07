@@ -46,11 +46,18 @@ Some commands can be found in the `bin` directory.
 `history` - shows all typed commands history<br>
 `history n` -shows last n commands
 
+`sudo <command>` - Run the command as superuser.
+
 `!<text>` - repeats a previous command in history which started with 'text'<br>
 `!!` - repeats the previous command<br>
-`sudo !!` - repeats the previous command as sudo
+`sudo !!` - repeats the previous command as superuser.
 
-`man <command>` - shows manual for that command. Manual contains all the flags realated to that command.
+`whoami` -  gives the username of the current user.<br/>
+`sudo su <username>` - Used to switch to a different user. This prompts for the password of the user you switch to.
+
+- **Trivia:**`sudo` stands for `SUperuser DO` and `su` stands for `Switch User`.
+
+`man <command>` - shows manual entry for the command. Manual contains all the flags realated to that command and their use.
 
 `.` - refers to current directory<br/>
 `..` - refers to parent directory<br/>
@@ -70,39 +77,71 @@ Some commands can be found in the `bin` directory.
 
 - **Trivia:** Unless you have infinite scrolling turned on (available in Profile Preferences -> Scrolling tab of the terminal), there is a limit to how many lines you can see on the screen.
 
-`(output of some command) | less` - allows the user to advance through the content by pressing SPACE, move backwards by pressing 'b' and quit using 'q'. Pressing ESC followed by SPACE allows you to scroll down one screen at a time.
+`<output of some command> | less` - allows the user to advance through the content by pressing SPACE, move backwards by pressing 'b' and quit using 'q'. Pressing ESC followed by SPACE allows you to scroll down one screen at a time.
 
 Example: `cat file | less`
 
-`(output of some command) | more` - is similar to using `less`, but allows viewing one screen at a time.
+`<output of some command> | more` - is similar to using `less`, but allows viewing one screen at a time.
 
 - **Trivia:** All commands typed in the terminal are saved in `history` or the `.bash_history` file in the home directory.
 `history | less` or `cat ~/.bash_history` will let you scroll through previously typed commands.
 
-##### Flags
+##### Common Flags
 
 `-f` forcefully do a task i.e. without asking for confirmation<br/>
-`-r` recursively do a task(looks in subdirectories too)
+`-r` recursively do a task(looks in subdirectories too)<br/>
+`-o <filename>` - stores the output with a personalised filename rather than the default filename. For e.g. `g++ -o myfile program.cpp` will generate an executable with the name `myfile` rather than the default `a.out`.
 
 ##### Opening files with common Text Editors
 
-`(vim|vi|nano|emacs) <filename>` : opens a file in the respective text editor inside the terminal.<br/>
-`subl <filename>` : opens a file with filename in sublime text.<br/>
-`gedit <filename>` : opens a file with filename in gedit .
+`<vim|vi|nano|emacs> <filename>` : opens a file in the respective text editor inside the terminal.<br/>
+`gedit <filename>` : opens a file with filename in Gedit .
+`subl <filename>` : opens a file with filename in Sublime Text.<br/>
+`subl <foldername>`: Opens the entire folder in Sublime Text. Very helpful when you are working on projects with multiple file.
 
 ##### Running Scripts
 
 `sh myscript` - To run a non-executable `sh` script.<br/>
 `bash myscript` - To run a non-executable `bash` script<br/>
-`location/of/executable` - Just type the file location to run an executable file.
+`./<location/of/executable>` - Just type the file location to run an executable file.
 
 ##### Aliases
 
 An alias is a word assigned to a statement, and acts as a keyboard shortcut.
 
-`alias py='python'` - would pass "python" whenever py is entered.
+`alias py='python'` - would pass `python` whenever `py` is entered.
 
-This alias lasts as long as the terminal is running. To create a permanent alias, append this line to `~/.bash_profile` or `~/.bash_aliases`
+This alias lasts as long as the terminal is running. To create a permanent alias, append this line to `~/.bash_profile` or `~/.bash_aliases`.
+
+`unalias <alias_name>` - Removes the alias. E.g. `unalias py` - After this `py` would not work as `python`.
+
+##### Downloading
+
+`Wget` and `cURL` are two great utilities for downloading stuff. They are a replacement to the Download Managers you must have used on Windows.
+
+- **Trivia:** `cURL` is powered by `libcurl` - a cross-platform library with a stable API that can be used by each and everyone. `Wget` on the other hand is command line only. There's no library.
+
+`wget <url_to_download>` - Downloads the file at the specified url.<br/>
+`wget -c <url_to_download>` - Resumes an incomplete download. Very helpful when a large file download stops due to some error.<br/>
+`wget --tries=100 <url_to_download>` - Set the retry download attempts. This is very useful when the download file is large and the internet connection has problems.
+
+- **Trivia:** `wget` does 20 retries by default.
+
+`wget -i <download_list_file.txt>` - For Multiple downloads. Downloads all the files/URLs mentioned in file.<br/>
+`wget --recursive --page-requisites --html-extension --convert-links --no-parent <URL>` - Use this command to download the entire website so that you can view it offline.<br/>
+- --recursive: download the entire Web site.
+- --page-requisites: get all the elements that compose the page (images, CSS and so on).
+- --html-extension: save files with the .html extension.
+- --convert-links: convert links so that they work locally, off-line.
+- --no-parent: prevents wget from downloading anything from the folders beneath the folder you want to acquire.
+
+- **Trivia:** `cURL` supports more protocols and authentication methdods than `Wget` and is almost always pre-installed on the OS. `Wget` on the other hand is famous because of its ability to download an entire website for offline view.
+
+`curl -O <url_to_download>` - Downloads the file at the specified url.<br/>
+`curl -O <URL1> -O <URL2>` - Downloads files at both urls.<br/>
+`curl -C - -O <url_to_download>` - Resumes an incomplete download.
+
+- **Trivia:** `cURL` can also be used to upload files to `ftp` server. Use `curl -u <ftpuser>:<ftppass> -T <myfile> <ftp://ftp.testserver.com>`
 
 ##### Changing Permissions
 
@@ -112,7 +151,7 @@ This alias lasts as long as the terminal is running. To create a permanent alias
 
 This are just examples. `chmod` has a lot of different configurations for different kinds of permissions. For all details see its `man` page.
 
-`chown -R (username) path/of/file/or/directory` - Gives the ownership of the file or all files in the directory and its subdirectories to the mentioned user.
+`chown -R <username> path/of/file/or/directory` - Gives the ownership of the file or all files in the directory and its subdirectories to the mentioned user.
 
 ##### Some common network debugging commands
 
@@ -120,15 +159,31 @@ This are just examples. `chmod` has a lot of different configurations for differ
 
 `iwconfig` - similar to `ifconfig`, but used for wireless network interfaces. <br/>
 
-##### Extracting .tar files
+`ping domain_name_or_ip_address` - Used to ping a domain name or IP address continuously. It can be stopped by `^C`. Generally used to check if the server is up and responding.
 
-`tar -xvzf file.tar.gz` - used to extract the .tar.gz file<br>
--f: this must be the last flag of the command, and the tar file must be immediately after. It tells tar the name and path of the compressed file.<br>
--z: tells tar to decompress the archive using gzip<br>
+`dig example.com` - Queries DNS servers for information. Using the `+short` flag returns the IP address linked to the domain name.
+
+`whois domain_name.com` - Generates a long list of output regarding the server registration.
+
+##### Extracting .tar.gz files
+
+`tar -xvzf <file.tar.gz>` - used to extract the .tar.gz file<br>
+
+#### Compressing files to .tar.gz
+
+`tar -cvzf <tarballname.tar.gz> <item_to_compress_1> <item_to_compress_2>` - used to compress any number of files into a .tar.gz compressed archive.<br>
+
+-tarball.tar.gz: This is the name of the final compressed archive.
+
 -x: tar can collect files or extract them. x does the latter.<br>
--v: makes tar talk a lot. Verbose output shows you all the files being extracted.
+-c: Collects files to be compressed<br>
+-v: makes tar talk a lot. Verbose output shows you all the files being extracted.<br>
+-z: tells tar to decompress the archive using gzip<br>
+-f: this must be the last flag of the command, and the tar file must be immediately after. It tells tar the name and path of the compressed file.
 
 ##### Process Management
+
+`top` - displays processor activity in real time.
 
 `ps` returns the snapshot of current processes.<br>
 `ps -e` returns every process running on the system<br>
