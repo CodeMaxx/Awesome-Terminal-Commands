@@ -61,7 +61,8 @@
 
 `time <command>` - gives the time taken for the command to execute. Very useful when you want to find the execution time of your programs.
 
-`diff [file1] [file2]` - compares the two files line by line. Usually used to compare ideal output and user-generated output.
+`diff [file1] [file2]` - compares the two files line by line. Usually used to compare ideal output and user-generated output.<br>
+`diff -z [file1] [file2]` - Ignores trailing-whitespaces while comparing the two files
 
 `.` - refers to current directory<br/>
 `..` - refers to parent directory<br/>
