@@ -59,6 +59,10 @@
 
 `man <command>` - shows manual entry for the command. Manual contains all the flags realated to that command and their use.
 
+`time <command>` - gives the time taken for the command to execute. Very useful when you want to find the execution time of your programs.
+
+`diff [file1] [file2]` - compares the two files line by line. Usually used to compare ideal output and user-generated output.
+
 `.` - refers to current directory<br/>
 `..` - refers to parent directory<br/>
 
