@@ -6,7 +6,7 @@ This repository contains general purpose commands which are often used by unix o
 ### How to contribute
 
 - Create an issue if you thing some command has been wrongly explained.
-- If you want to suggest any commands you think are used often enough and should be added to the list, either open an issue specifically mentioning the exact working commands or better create a Pull Request and add it yourself! :smiley:
+- If you want to suggest any commands you think are used often enough and should be added to the list, either open an issue specifically mentioning the exact working commands or better create a Pull Request and add it yourself! :smiley: See the next point for guidelines on making Pull Requests.
 - Feel free to make Pull Requests to fix issues or add new commands. Keep the following things in mind while contributing if you want your PR to be accepted.
     - Add only really useful commands.
     - Don't give combinations of different commands for different use cases(Unless they are usually always used together).
