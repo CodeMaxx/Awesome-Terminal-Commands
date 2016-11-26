@@ -168,11 +168,11 @@ This are just examples. `chmod` has a lot of different configurations for differ
 
 `dig example.com` - Queries DNS servers for information. Using the `+short` flag returns the IP address linked to the domain name.
 
-`dig -x IP address` - Queries and returns a PTR (pointer) record against the IP address queried. Example `dig -x 127.0.0.1` returns `localhost`
+`dig -x [IP address]` - Queries and returns a PTR (pointer) record against the IP address queried. Example `dig -x 127.0.0.1` returns `localhost`
 
 `arp` arp manipulates or displays the kernel's <i>IPv4</i> network neighbour cache. It can add entries to the table, delete one, or display the current content.
 
-'traceroute IP-address' tracks  the route packets taken from an IP network on their way to a given host. It utilizes the IP protocol's <b>time to  live</b> (TTL) field  and  attempts to elicit an `ICMP TIME_EXCEEDED` response from each gateway along the path to the host. 
+`traceroute [IP address]` tracks  the route packets taken from an IP network on their way to a given host. It utilizes the IP protocol's <b>time to  live</b> (TTL) field  and  attempts to elicit an `ICMP TIME_EXCEEDED` response from each gateway along the path to the host. 
 
 
 `whois domain_name.com` - Generates a long list of output regarding the server registration.
