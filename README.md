@@ -164,11 +164,17 @@ This are just examples. `chmod` has a lot of different configurations for differ
 
 `iwconfig` - similar to `ifconfig`, but used for wireless network interfaces. <br/>
 
-`ping domain_name_or_ip_address` - Used to ping a domain name or IP address continuously. It can be stopped by `^C`. Generally used to check if the server is up and responding.
+`ping [domain_name_or_ip_address]` - Used to ping a domain name or IP address continuously. It can be stopped by `^C`. Generally used to check if the server is up and responding.
 
-`dig example.com` - Queries DNS servers for information. Using the `+short` flag returns the IP address linked to the domain name.
+`dig example.com` - Queries DNS servers for information. Gives back the `A` record which points the domain name to an IP address. Using the `+short` flag returns just the IP address linked to the domain name.
 
-`dig -x [IP address]` - Queries and returns a PTR (pointer) record against the IP address queried. Example `dig -x 127.0.0.1` returns `localhost`
+`+nocomments` – Turn off the comment lines<br/>
+`+noauthority` – Turn off the authority section<br/>
+`+noadditional` – Turn off the additional section<br/>
+`+nostats` – Turn off the stats section<br/>
+`+noanswer` – Turn off the answer section (Of course, you wouldn’t want to turn off the answer section)
+
+`dig -x [IP address]` - Queries and returns a `PTR` record against the IP address queried. The PTR record helps in Reverse DNS Lookup i.e. it provides the domain name linked to an IP address. Example `dig -x 127.0.0.1 +short` returns `localhost.`.
 
 `arp` arp manipulates or displays the kernel's <i>IPv4</i> network neighbour cache. It can add entries to the table, delete one, or display the current content.
 
