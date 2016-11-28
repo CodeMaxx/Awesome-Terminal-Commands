@@ -158,15 +158,30 @@ This are just examples. `chmod` has a lot of different configurations for differ
 
 `chown -R <username> path/of/file/or/directory` - Gives the ownership of the file or all files in the directory and its subdirectories to the mentioned user.
 
-##### Some common network debugging commands
+##### Some common Networking commands
 
 `ifconfig` - when used without any flags, used to display the status of all active network interfaces.<br/>
 
 `iwconfig` - similar to `ifconfig`, but used for wireless network interfaces. <br/>
 
-`ping domain_name_or_ip_address` - Used to ping a domain name or IP address continuously. It can be stopped by `^C`. Generally used to check if the server is up and responding.
+`ping [domain_name_or_ip_address]` - Used to ping a domain name or IP address continuously. It can be stopped by `^C`. Generally used to check if the server is up and responding.
 
-`dig example.com` - Queries DNS servers for information. Using the `+short` flag returns the IP address linked to the domain name.
+`dig example.com` - Queries DNS servers for information. Gives back the `A` record which points the domain name to an IP address. Using the `+short` flag returns just the IP address linked to the domain name.
+
+`+nocomments` – Turn off the comment lines<br/>
+`+noauthority` – Turn off the authority section<br/>
+`+noadditional` – Turn off the additional section<br/>
+`+nostats` – Turn off the stats section<br/>
+`+noanswer` – Turn off the answer section (Of course, you wouldn’t want to turn off the answer section)
+
+`dig -x [IP address]` - Queries and returns a `PTR` record against the IP address queried. The PTR record helps in Reverse DNS Lookup i.e. it provides the domain name linked to an IP address. Example `dig -x 127.0.0.1 +short` returns `localhost.`.
+
+`arp` - It manipulates or displays the kernel's <i>IPv4</i> network neighbour cache. It can add entries to the table, delete one, or display the current content.
+
+- **Trivia:** ARP stands for Address Resolution Protocol.
+
+`traceroute [IP address/ Domain name]` tracks  the route packets taken from our computer on their way to a given host. It utilizes the IP protocol's <b>time to  live</b> (TTL) field  and  attempts to elicit an `ICMP TIME_EXCEEDED` response from each gateway along the path to the host. This response contains the IP address of the gateway which are then listed as output on the terminal.<br/>
+**Note:** You might see `*`(asterisk) instead of IPs sometimes. This means that the packet was not aknowledged and no response was sent before timeout. This is generally done purposefully to hide the identity of the servers.
 
 `whois domain_name.com` - Generates a long list of output regarding the server registration.
 
