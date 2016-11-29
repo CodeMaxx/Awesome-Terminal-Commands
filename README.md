@@ -191,15 +191,15 @@ This are just examples. `chmod` has a lot of different configurations for differ
 
 #### Compressing files to .tar.gz
 
-`tar -cvzf <tarballname.tar.gz> <item_to_compress_1> <item_to_compress_2>` - used to compress any number of files into a .tar.gz compressed archive.<br>
+`tar -cvzf <tarballname.tar.gz> <item_to_compress_1> [item_to_compress_2]` - used to compress any number of files into a .tar.gz compressed archive.<br>
 
--tarball.tar.gz: This is the name of the final compressed archive.
+- tarball.tar.gz: This is the name of the final compressed archive.
 
--x: tar can collect files or extract them. x does the latter.<br>
--c: Collects files to be compressed<br>
--v: makes tar talk a lot. Verbose output shows you all the files being extracted.<br>
--z: tells tar to decompress the archive using gzip<br>
--f: this must be the last flag of the command, and the tar file must be immediately after. It tells tar the name and path of the compressed file.
+`-x`: tar can collect files or extract them. x does the latter.<br>
+`-c`: Collects files to be compressed<br>
+`-v`: makes tar talk a lot. Verbose output shows you all the files being extracted.<br>
+`-z`: tells tar to decompress the archive using gzip<br>
+`-f`: this must be the last flag of the command, and the tar file must be immediately after. It tells tar the name and path of the compressed file.
 
 ##### Process Management
 
