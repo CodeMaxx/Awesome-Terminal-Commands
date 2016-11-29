@@ -3,7 +3,7 @@
 `ls` - list files<br>
 `ls -a` - display hidden files and folders<br>
 `ls -R` - provide a tree listing of directory structure.<br>
-`ls -l` - displays extra details like size, user, date, permissions<br>
+`ls -l` - displays extra details like size, owner, group, date the file was last modified and permissions<br>
 
 `cd <path>` -> change directory<br/>
 (`cd ..` -> takes to parent directory<br/>
@@ -26,13 +26,13 @@
 `cp /loc1/file /loc2/file` - used to copy file from /loc1 to /loc2.<br>
 `mv /loc1/file /loc2/file` - used to move file from /loc1 to /loc2.
 
-- **Trivia:** `mv oldfilename newfilename` is the best method to rename a file.
+- **Trivia:** `mv [old_filename] [new_filename]` is the best method to rename a file.
 
 `grep <text to search> <files to search in>`
 
 `cut` - cuts out selected portions of each line from file and writes them to the standard output.<br>
 `cut -c 2-5 file` - cut characters 2 to 5 from each line of file<br>
-`cut -d"x" -f 1 file` - returns each part of every line before first occurance of 'x' (-d is delimiter and -f is field)
+`cut -d"x" -f 1 file` - returns each part of every line before first occurrence of 'x' (-d is delimiter and -f is field)
 
 
 `clear` or `^l` - scrolls down to an empty screen
@@ -57,7 +57,7 @@
 
 - **Trivia:**`sudo` stands for `SUperuser DO` and `su` stands for `Switch User`.
 
-`man <command>` - shows manual entry for the command. Manual contains all the flags realated to that command and their use.
+`man <command>` - shows manual entry for the command. Manual contains all the flags related to that command and their use.
 
 `time <command>` - gives the time taken for the command to execute. Very useful when you want to find the execution time of your programs.
 
@@ -106,8 +106,8 @@ Example: `cat file | less`
 
 ##### Running Scripts
 
-`sh myscript` - To run a non-executable `sh` script.<br/>
-`bash myscript` - To run a non-executable `bash` script<br/>
+`sh [path/to/script]` - To run a non-executable `sh` script.<br/>
+`bash [path/to/script]` - To run a non-executable `bash` script<br/>
 `./<location/of/executable>` - Just type the file location to run an executable file.
 
 ##### Aliases
@@ -181,7 +181,7 @@ This are just examples. `chmod` has a lot of different configurations for differ
 - **Trivia:** ARP stands for Address Resolution Protocol.
 
 `traceroute [IP address/ Domain name]` tracks  the route packets taken from our computer on their way to a given host. It utilizes the IP protocol's <b>time to  live</b> (TTL) field  and  attempts to elicit an `ICMP TIME_EXCEEDED` response from each gateway along the path to the host. This response contains the IP address of the gateway which are then listed as output on the terminal.<br/>
-**Note:** You might see `*`(asterisk) instead of IPs sometimes. This means that the packet was not aknowledged and no response was sent before timeout. This is generally done purposefully to hide the identity of the servers.
+**Note:** You might see `*`(asterisk) instead of IPs sometimes. This means that the packet was not acknowledged and no response was sent before timeout. This is generally done purposefully to hide the identity of the servers.
 
 `whois domain_name.com` - Generates a long list of output regarding the server registration.
 
@@ -210,7 +210,7 @@ This are just examples. `chmod` has a lot of different configurations for differ
 `ps -u <useraccount>` returns list of processes running on user account.<br>
 `ps -u <useraccount> | grep <Application>` - fetches all processes of "Application"
 
-The left most number returned by the `ps` command is called the Process ID (PID).
+The leftmost number returned by the `ps` command is called the Process ID (PID).
 A particular process can be terminated using `kill`
 
 `kill <PID>` - kills the process having PID as that entered.<br>
