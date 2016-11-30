@@ -176,6 +176,10 @@ This are just examples. `chmod` has a lot of different configurations for differ
 
 `dig -x [IP address]` - Queries and returns a `PTR` record against the IP address queried. The PTR record helps in Reverse DNS Lookup i.e. it provides the domain name linked to an IP address. Example `dig -x 127.0.0.1 +short` returns `localhost.`.
 
+- **Trivia:** When you reverse lookup an IP say 1.2.3.4, the PTR record for the domain name `4.3.2.1.in-addr.arpa`, more generally `reverse_ip.in-addr.arpa`. (in-addr -> Inverse Address. arpa -> Address and Routing Parameter Area)
+
+- **Trivia:** The arpa top-level domain was the first domain installed in the Domain Name System (DNS).
+
 `arp` - It manipulates or displays the kernel's <i>IPv4</i> network neighbour cache. It can add entries to the table, delete one, or display the current content.
 
 - **Trivia:** ARP stands for Address Resolution Protocol.
