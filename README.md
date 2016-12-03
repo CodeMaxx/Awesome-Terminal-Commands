@@ -189,6 +189,16 @@ This are just examples. `chmod` has a lot of different configurations for differ
 
 `whois domain_name.com` - Generates a long list of output regarding the server registration.
 
+`netstat` - The netstat command symbolically displays the contents of various network-related data structures. It helps answer the question “What in blazes is going on on my network?”. The columns present in the output are:
+
+- `Proto` - tell us if the socket listed is [TCP](https://www.wikiwand.com/en/Transmission_Control_Protocol) or [UDP](https://www.wikiwand.com/en/User_Datagram_Protocol)<br>
+
+- `Recv-Q` and `Send-Q` - tell us how much data is in the queue for that socket, waiting to be read (Recv-Q) or sent (Send-Q). In short: if this is 0, everything’s ok, if there are non-zero values anywhere, there may be trouble.<br>
+- `Local Address` and `Foreign Address` - tell to which hosts and ports the listed sockets are connected. The local end is always on the computer on which you’re running netstat , and the foreign end is about the other computer (could be somewhere in the local network or somewhere on the internet).<br>
+**Note:** The `Foreign Address` can be `localhost` sometimes. It means the computer is talking to itself over the network, so to speak. This is also known as `loopback`.<br>
+
+- `State` - tells in which state the listed sockets are. The TCP protocol defines states, including “LISTEN” (wait for some external computer to contact us) and “ESTABLISHED” (ready for communication). The stranger among these is the “CLOSE WAIT” state shown by two sockets. This means that the foreign or remote machine has already closed the connection, but that the local program somehow hasn’t followed suit. Strange states and non-empty queues(non-zero values in `Send-Q` or `Recv-Q`) often go together.
+
 ##### Extracting .tar.gz files
 
 `tar -xvzf <file.tar.gz>` - used to extract the .tar.gz file<br>
