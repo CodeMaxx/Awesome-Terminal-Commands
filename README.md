@@ -1,5 +1,12 @@
 # Unix Terminal Commands for Beginners
 
+
+- Software Specific Commands
+ - [nmap](https://github.com/CodeMaxx/Terminal-Commands-Beginner/blob/master/nmap.md)
+ - [sqlmap](https://github.com/CodeMaxx/Terminal-Commands-Beginner/blob/master/sqlmap.md)
+ 
+<hr>
+ 
 `ls` - list files<br>
 `ls -a` - display hidden files and folders<br>
 `ls -R` - provide a tree listing of directory structure.<br>
