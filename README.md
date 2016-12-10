@@ -1,4 +1,4 @@
-# Unix Terminal Commands for Beginners
+# *nix Terminal Commands for Beginners
 
 
 - Software Specific Commands
@@ -7,28 +7,33 @@
  
 <hr>
  
-`ls` - list files<br>
-`ls -a` - display hidden files and folders<br>
-`ls -R` - provide a tree listing of directory structure.<br>
+`ls` - lists files<br>
+`ls -a` - display hidden files<br>
+`ls -R` - recursively displays files<br>
 `ls -l` - displays extra details like size, owner, group, date the file was last modified and permissions<br>
 
-`cd <path>` -> change directory<br/>
-(`cd ..` -> takes to parent directory<br/>
- `cd` -> takes to user directory[denoted by ~]<br/>
- `cd -` -> takes to the previous directory we were in)<br/>
+`cd <path>` - change directory to `path`<br/>
+- Here `path` may be relative or absolute.
 
-- **Trivia:** `user` directory is present in the `home` directory which is present in the `root` directory. Then there is no upper directory.
+(`cd ..` - takes to parent directory<br/>
+ `cd` - takes to `<user>` directory[denoted by `~`]<br/>
+ `cd -` - takes to the previous directory you were in)<br/>
 
-`pwd` - print working directory
+- **Trivia:** `user` directory is present in the `home` directory which is present in the `root` directory(denoted by `/`). [`/home/<user>` in Linux and `Users/<user>` in macOS] Then there is no further upper directory after `root`.
+
+`pwd` - print working directory. Prints absolute path to current directory.
 
 `^` symbol is used for representing 'ctrl'  ... e.g. `^C` = ctrl key + c
 
 `touch <filename>`- creates a new file with any extension we want.
 
-`rm` - used to remove a file.<br/>
-`rm -r` - used to remove a directory.<br/>
-`mkdir` - makes a directory<br/>
-`rmdir` - removes an **empty** directory<br/>
+**Note:** `touch` is a much more advanced command and can be used to change the file access and modification times. For more info see `man touch`.
+
+`rm <filename>` - removes a file.<br/>
+`rm -r <directory>` - recursively removes all files in a directory. Then removes the empty directory.<br>
+**Note:** This command might ask you for permission for every file that it deletes. To prevent this use `-f`(force) flag.<br>
+`mkdir <dir_name>` - makes a new directory<br/>
+`rmdir <dir_name>` - removes an **empty** directory<br/>
 
 `cp /loc1/file /loc2/file` - used to copy file from /loc1 to /loc2.<br>
 `mv /loc1/file /loc2/file` - used to move file from /loc1 to /loc2.
@@ -44,7 +49,9 @@
 
 `clear` or `^l` - scrolls down to an empty screen
 
-`reset` - change terminal to default settings
+`reset` - initialises terminal variables to thier default value
+
+`passwd <username>` - Change password for a user
 
 `find <query>` - finds files and directories with name `query` in the current directory and its subdirectories<br/>
 `find -d <query>` - looks for a directory with name `query`<br/>
@@ -53,16 +60,19 @@
 `history` - shows all typed commands history<br>
 `history n` -shows last n commands
 
-`sudo <command>` - Run the command as superuser.
+`sudo <command>` - Run the command as superuser(a.k.a. root)
 
 `!<text>` - repeats a previous command in history which started with 'text'<br>
 `!!` - repeats the previous command<br>
-`sudo !!` - repeats the previous command as superuser.
+`sudo !!` - repeats the previous command as superuser
 
-`whoami` -  gives the username of the current user.<br/>
-`sudo su <username>` - Used to switch to a different user. This prompts for the password of the user you switch to.
+`whoami` -  gives the username of the current user.<br>
+`su <username>` - Used to switch to a different user. This prompts for the password of the user you switch to.<br>
+`sudo -i` - Switch to `root` user. This user has complete access to all files.
 
-- **Trivia:**`sudo` stands for `SUperuser DO` and `su` stands for `Switch User`.
+**Note:** While `sudo -i` will ask you for your login password to become superuser, `su root` will ask for the root password. These are not the same. You may have to set or change the root password by running `sudo passwd root` first.
+
+- **Trivia:**`sudo` stands for `SUperuser DO` and `su` stands for `Substitute User`.
 
 `man <command>` - shows manual entry for the command. Manual contains all the flags related to that command and their use.
 
