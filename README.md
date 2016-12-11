@@ -35,8 +35,9 @@
 `mkdir <dir_name>` - makes a new directory<br/>
 `rmdir <dir_name>` - removes an **empty** directory<br/>
 
-`cp /loc1/file /loc2/file` - used to copy file from /loc1 to /loc2.<br>
-`mv /loc1/file /loc2/file` - used to move file from /loc1 to /loc2.
+`cp /path/to/file /path/to/copy/to` - used to copy file.<br>
+(Use `cp -r` to copy a directory recursively)<br>
+`mv /old/path/to/file /new/path/to/file` - used to move file.
 
 - **Trivia:** `mv [old_filename] [new_filename]` is the best method to rename a file.
 
