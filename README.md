@@ -8,9 +8,10 @@
 <hr>
  
 `ls` - lists files<br>
-`ls -a` - display hidden files<br>
-`ls -R` - recursively displays files<br>
-`ls -l` - displays extra details like size, owner, group, date the file was last modified and permissions<br>
+- **Important flags**<br>
+`-a` - display hidden files<br>
+`-R` - recursively displays files<br>
+`-l` - displays extra details like size, owner, group, date the file was last modified and permissions
 
 `cd <path>` - change directory to `path`<br/>
 - Here `path` may be relative or absolute.
@@ -41,7 +42,13 @@
 
 - **Trivia:** `mv [old_filename] [new_filename]` is the best method to rename a file.
 
-`grep <text to search> <files to search in>`
+`grep [flag] <text to search> <files to search in>`<br>
+- **Important flags**<br>
+`-i` - Performs case insensitive matching<br>
+`-r` - Helps to search recursively through a directory<br>
+`-l` - Outputs the name of the files in which the search text is present<br>
+`-L` - Outputs the name of the files in which the search text is not present<br>
+`--color=auto` - Highlights the search text in the output
 
 `cut` - cuts out selected portions of each line from file and writes them to the standard output.<br>
 `cut -c 2-5 file` - cut characters 2 to 5 from each line of file<br>
