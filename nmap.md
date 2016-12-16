@@ -11,9 +11,9 @@ It is particularly useful as it can
   * Detect the vulnerability and security holes
 
 ## Basic Commands:
-Usage: nmap [Scan Type(s)] [Options] {target specification}
+Usage: nmap [Scan Type(s)] [Options] <target specification>
 ```
-nmap target
+nmap <target_address_or_ip>
 # nmap target.com
 # nmap 192.168.1.1
 ```
@@ -24,7 +24,7 @@ nmap 192.168.1.1/24
 ```
 To scan multiple targets
 ```
-nmap target1 target2 target3
+nmap <target1> <target2> [target3]
 ```
 To scan a range of IPs:
 ```
