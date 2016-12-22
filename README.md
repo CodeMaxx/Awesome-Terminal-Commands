@@ -173,6 +173,14 @@ This alias lasts as long as the terminal is running. To create a permanent alias
 
 - **Trivia:** `cURL` can also be used to upload files to `ftp` server. Use `curl -u <ftpuser>:<ftppass> -T <myfile> <ftp://ftp.testserver.com>`
 
+##### Installation Commands
+
+`sudo apt-get install <package-name>` - Installs a package(on Debian based distributions)<br>
+- **Important flags**<br>
+`-y` - Replies **yes** to all confirmations `apt-get` asks for during install.
+
+`sudo apt-cache search <query>` - Searches package names and descriptions for the query string. Used to find the package-names.
+
 ##### Changing Permissions
 
 `chmod a+x file` - Grants execution permission to all users of a file.<br/>
