@@ -175,11 +175,19 @@ This alias lasts as long as the terminal is running. To create a permanent alias
 
 ##### Installation Commands
 
-`sudo apt-get install <package-name>` - Installs a package(on Debian based distributions)<br>
+`apt-get install <package-name>` - Installs a package (for Debian based distributions)<br>
 - **Important flags**<br>
 `-y` - Replies **yes** to all confirmations `apt-get` asks for during install.
 
-`sudo apt-cache search <query>` - Searches package names and descriptions for the query string. Used to find the package-names.
+`yum install <package-name>` - Installs a package (for Fedora & Red Hat)
+
+`apt-cache search <query>` - Searches package names and descriptions for the query string. Used to find the package-names.
+
+`apt-get remove <package-name>` - Removes a package (but not the configuration files)
+
+`apt-get purge <package-name>` - Removes a package (along with the configuration files)
+
+`apt-get update` - APT keeps a local database on your hard drive with a list of all available packages and where to find them. This command explicitly updates the database.
 
 ##### Changing Permissions
 
