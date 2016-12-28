@@ -7,6 +7,8 @@
  
 <hr>
  
+ ### General
+ 
 `ls` - lists files<br>
 - **Important flags**<br>
 `-a` - display hidden files<br>
@@ -116,26 +118,26 @@ Example: `cat file | less`
 - **Trivia:** All commands typed in the terminal are saved in `history` or the `.bash_history` file in the home directory.
 `history | less` or `cat ~/.bash_history` will let you scroll through previously typed commands.
 
-##### Common Flags
+<hr>
 
-`-f` forcefully do a task i.e. without asking for confirmation<br/>
-`-r` recursively do a task(looks in subdirectories too)<br/>
-`-o <filename>` - stores the output with a personalised filename rather than the default filename. For e.g. `g++ -o myfile program.cpp` will generate an executable with the name `myfile` rather than the default `a.out`.
-
-##### Opening files with common Text Editors
+### Opening files with common Text Editors
 
 `<vim|vi|nano|emacs> <filename>` : opens a file in the respective text editor inside the terminal.<br/>
 `gedit <filename>` : opens a file with filename in Gedit .
 `subl <filename>` : opens a file with filename in Sublime Text.<br/>
 `subl <foldername>`: Opens the entire folder in Sublime Text. Very helpful when you are working on projects with multiple file.
 
-##### Running Scripts
+<hr>
+
+### Running Scripts
 
 `sh [path/to/script]` - To run a non-executable `sh` script.<br/>
 `bash [path/to/script]` - To run a non-executable `bash` script<br/>
 `./<location/of/executable>` - Just type the file location to run an executable file.
 
-##### Aliases
+<hr>
+
+### Aliases
 
 An alias is a word assigned to a statement, and acts as a keyboard shortcut.
 
@@ -145,7 +147,9 @@ This alias lasts as long as the terminal is running. To create a permanent alias
 
 `unalias <alias_name>` - Removes the alias. E.g. `unalias py` - After this `py` would not work as `python`.
 
-##### Downloading
+<hr>
+
+### Downloading
 
 `Wget` and `cURL` are two great utilities for downloading stuff. They are a replacement to the Download Managers you must have used on Windows.
 
@@ -173,9 +177,11 @@ This alias lasts as long as the terminal is running. To create a permanent alias
 
 - **Trivia:** `cURL` can also be used to upload files to `ftp` server. Use `curl -u <ftpuser>:<ftppass> -T <myfile> <ftp://ftp.testserver.com>`
 
-##### Installation Commands
+<hr>
 
-- Debian, Ubuntu and other debian-based distros
+### Installation Commands
+
+##### Debian, Ubuntu and other debian-based distros
 
 `apt-get install <package-name>` - Installs a package<br>
 - **Important flags**<br>
@@ -189,11 +195,13 @@ This alias lasts as long as the terminal is running. To create a permanent alias
 
 `apt-get update` - APT keeps a local database on your hard drive with a list of all available packages and where to find them. This command explicitly updates the database.
 
-- Fedora, Red Hat and CentOS
+##### Fedora, Red Hat and CentOS
 
 `yum install <package-name>` - Installs a package
 
-##### Changing Permissions
+<hr>
+
+### Changing Permissions
 
 `chmod a+x file` - Grants execution permission to all users of a file.<br/>
 `chmod a+w file` - Grants write permission to all users of a file.<br/>
@@ -203,7 +211,9 @@ This are just examples. `chmod` has a lot of different configurations for differ
 
 `chown -R <username> path/of/file/or/directory` - Gives the ownership of the file or all files in the directory and its subdirectories to the mentioned user.
 
-##### Some common Networking commands
+<hr>
+
+### Networking
 
 `ifconfig` - when used without any flags, used to display the status of all active network interfaces.<br/>
 
@@ -244,11 +254,15 @@ This are just examples. `chmod` has a lot of different configurations for differ
 
 - `State` - tells in which state the listed sockets are. The TCP protocol defines states, including “LISTEN” (wait for some external computer to contact us) and “ESTABLISHED” (ready for communication). The stranger among these is the “CLOSE WAIT” state shown by two sockets. This means that the foreign or remote machine has already closed the connection, but that the local program somehow hasn’t followed suit. Strange states and non-empty queues(non-zero values in `Send-Q` or `Recv-Q`) often go together.
 
-##### Extracting .tar.gz files
+<hr>
+
+### Extracting compressed files
 
 `tar -xvzf <file.tar.gz>` - used to extract the .tar.gz file<br>
 
-#### Compressing files to .tar.gz
+<hr>
+
+### Compressing files
 
 `tar -cvzf <tarballname.tar.gz> <item_to_compress_1> [item_to_compress_2]` - used to compress any number of files into a .tar.gz compressed archive.<br>
 
@@ -260,7 +274,9 @@ This are just examples. `chmod` has a lot of different configurations for differ
 `-z`: tells tar to decompress the archive using gzip<br>
 `-f`: this must be the last flag of the command, and the tar file must be immediately after. It tells tar the name and path of the compressed file.
 
-##### Process Management
+<hr>
+
+### Process Management
 
 `top` - displays processor activity in real time.
 
