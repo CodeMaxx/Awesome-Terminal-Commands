@@ -7,7 +7,7 @@
  
 <hr>
  
- ### General
+### General
  
 `ls` - lists files<br>
 - **Important flags**<br>
