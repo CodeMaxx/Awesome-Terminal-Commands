@@ -48,6 +48,7 @@
 - **Important flags**<br>
 `-i` - Performs case insensitive matching<br>
 `-r` - Helps to search recursively through a directory<br>
+`-n` - Outputs the line number along with the file name in which the search text is present<br>
 `-l` - Outputs the name of the files in which the search text is present<br>
 `-L` - Outputs the name of the files in which the search text is not present<br>
 `--color=auto` - Highlights the search text in the output
