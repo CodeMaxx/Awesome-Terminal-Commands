@@ -85,7 +85,24 @@
 
 - **Trivia:**`sudo` stands for `SUperuser DO` and `su` stands for `Substitute User`.
 
-`man <command>` - shows manual entry for the command. Manual contains all the flags related to that command and their use.
+`man [section_number] <command>` - shows manual entry for the command. Manual contains all the flags related to that command and their use. Manpages have different sections. Refer to the list below:
+
+```
+MANUAL SECTIONS
+    The standard sections of the manual include:
+
+    1      User Commands
+    2      System Calls
+    3      C Library Functions
+    4      Devices and Special Files
+    5      File Formats and Conventions
+    6      Games et. al.
+    7      Miscellanea
+    8      System Administration tools and Daemons
+
+    Distributions customize the manual section to their specifics,
+    which often include additional sections.
+```
 
 `time <command>` - gives the time taken for the command to execute. Very useful when you want to find the execution time of your programs.
 
