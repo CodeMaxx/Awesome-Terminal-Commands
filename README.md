@@ -26,7 +26,7 @@
 
 `pwd` - print working directory. Prints absolute path to current directory.
 
-`^` symbol is used for representing 'ctrl'  ... e.g. `^C` = ctrl key + c
+`^` symbol is used for representing 'ctrl' ... e.g. `^C` = ctrl key + c
 
 `touch <filename>`- creates a new file with any extension we want.
 
@@ -77,7 +77,7 @@
 `!!` - repeats the previous command<br>
 `sudo !!` - repeats the previous command as superuser
 
-`whoami` -  gives the username of the current user.<br>
+`whoami` - gives the username of the current user.<br>
 `su <username>` - Used to switch to a different user. This prompts for the password of the user you switch to.<br>
 `sudo -i` - Switch to `root` user. This user has complete access to all files.
 
@@ -257,7 +257,7 @@ This are just examples. `chmod` has a lot of different configurations for differ
 
 - **Trivia:** ARP stands for Address Resolution Protocol.
 
-`traceroute [IP address/ Domain name]` tracks  the route packets taken from our computer on their way to a given host. It utilizes the IP protocol's <b>time to  live</b> (TTL) field  and  attempts to elicit an `ICMP TIME_EXCEEDED` response from each gateway along the path to the host. This response contains the IP address of the gateway which are then listed as output on the terminal.<br/>
+`traceroute [IP address/ Domain name]` tracks the route packets taken from our computer on their way to a given host. It utilizes the IP protocol's <b>time to live</b> (TTL) field and attempts to elicit an `ICMP TIME_EXCEEDED` response from each gateway along the path to the host. This response contains the IP address of the gateway which are then listed as output on the terminal.<br/>
 **Note:** You might see `*`(asterisk) instead of IPs sometimes. This means that the packet was not acknowledged and no response was sent before timeout. This is generally done purposefully to hide the identity of the servers.
 
 `whois domain_name.com` - Generates a long list of output regarding the server registration.
@@ -309,3 +309,25 @@ A particular process can be terminated using `kill`
 `kill <PID>` - kills the process having PID as that entered.<br>
 `kill -9 <PID>` - performs a violent kill<br>
 `killall <processname>` - kills all instances of processname
+
+<hr>
+
+### Secure SHell
+
+SSH is some kind of an abbreviation of Secure SHell. It is a protocol that allows secure connections between computers.
+ssh (SSH client) is a program for logging into a remote machine and for executing commands on a remote machine.<br>
+
+`ssh <server's IP/Domain_name>` - connects to a server that supports ssh. Uses the username from your local machine<br>
+`ssh <username>@<server's IP/Domain_name>` - specify a different username<br>
+`ssh -p <port_number> <username>@<server's IP/Domain_name>` - specify a port. Default port is 22<br>
+
+- **Important flags**<br>
+`-4` - Forces ssh to use IPv4 addresses only<br>
+`-6` - Forces ssh to use IPv6 addresses only<br>
+`-A` - Enable forwarding of the authentication agent connection. This forwards the connection to your ssh agent to the remote computer<br>
+`-q` - Quiet mode (Suppresses most warnings and diagnostic messages)<br>
+`-V` - Display the version number<br>
+`-v` - Verbose mode (Prints debugging messages about its progress)<br>
+`-X` - Enables X11 forwarding which lets you run graphical applications remotely<br>
+`-t` - Forces a tty allocation even if a command is specified. This can be used to execute shell commands on the remote machine<br>
+`-Y` - Enables X11 connection forwarding and treats X11 clients as trusted.<br>
