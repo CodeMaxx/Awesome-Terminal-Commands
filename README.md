@@ -210,6 +210,8 @@ This alias lasts as long as the terminal is running. To create a permanent alias
 
 ##### Debian, Ubuntu and other debian-based distros
 
+**Note:** Installation/removal/modification of a package requires admin privilages.  Add `sudo` in the beginning of every such command
+
 `apt-get install <package-name>` - Installs a package<br>
 - **Important flags**<br>
 `-y` - Replies **yes** to all confirmations `apt-get` asks for during install.
@@ -249,6 +251,9 @@ This are just examples. `chmod` has a lot of different configurations for differ
 `ifconfig` - when used without any flags, used to display the status of all active network interfaces.<br/>
 
 `iwconfig` - similar to `ifconfig`, but used for wireless network interfaces. <br/>
+
+`hostname` - used to display the system's DNS name. <br/>
+`hostname -I` - used to display  all  network addresses of the host. <br/>
 
 `ping [domain_name_or_ip_address]` - Used to ping a domain name or IP address continuously. It can be stopped by `^C`. Generally used to check if the server is up and responding.
 
